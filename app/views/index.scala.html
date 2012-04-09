@@ -1,0 +1,11 @@
+@(articles: List[Article])
+
+@main {
+
+    <h1>Articles list</h1>
+
+    @for(article <- articles) {
+      <div><a href="@routes.Articles.show(article)">@article.name</a></div>
+    }
+
+}
